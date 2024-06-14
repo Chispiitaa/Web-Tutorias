@@ -1,0 +1,158 @@
+/* Ajustes generales */
+* {
+    box-sizing: border-box;
+}
+
+.form-register {
+    max-width: 100%;
+    padding: 15px;
+}
+.form-register input, .form-register select {
+    width: 100%;
+}
+.form-register label {
+    display: block;
+}
+.form-check-input[type="radio"] {
+    border-radius: 50%;
+}
+select option:hover {
+    background-color: brown;
+    color: white; /* Cambia el color del texto para que sea más legible sobre marrón */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita la barra de scroll horizontal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustes del main para ocupar el espacio restante */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* Evita la barra de scroll vertical en main */
+}
+
+/* Formulario de registro */
+.form-register {
+    width: 100%;
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px; /* Márgenes responsivos */
+    box-shadow: 7px 13px 37px brown;
+    padding: 20px 30px;
+    border: 2px solid #00000000;
+    border-radius: 10px;
+    background-color: #fff; /* Asegura que el fondo sea blanco */
+}
+
+/* Ajuste de controles de formulario */
+.controls {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #ffffff;
+    font-weight: lighter;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.controls:focus {
+    box-shadow: 0 0 5px brown;
+}
+
+/* Botones */
+.buttons {
+    width: 100%;
+    border-radius: 10px;
+    background: #4c0000;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container .row .col {
+    padding: 0 5px; /* Añade padding entre columnas */
+}
+
+/* Ajustes de pie de página */
+footer {
+    background-color: #4c0000;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #00000000;
+    text-align: center;
+    margin-top: auto; /* Empuja el footer al fondo */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .row {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .col {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+footer .col img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+footer .col p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffc107; /* Color dorado para el hover */
+}
+
+footer .row.mt-3 {
+    margin-top: 1rem;
+}
+
+footer .row.mt-3 .col p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc; /* Color gris claro para el texto de derechos reservados */
+}
+
+/* Asegurar que el formulario sea responsivo */
+@media (max-width: 800px) {
+    .form-register {
+        padding: 10px 20px; /* Ajusta el padding para pantallas más pequeñas */
+    }
+    
+    .buttons {
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+}

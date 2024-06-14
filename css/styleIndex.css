@@ -1,0 +1,150 @@
+main {
+    flex: 1;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero {
+    color: #000000;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main .container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px brown;
+    margin-bottom: 30px;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: brown;
+    border-bottom: 2px solid brown;
+    padding-bottom: 10px;
+}
+
+main p, main ul {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+main ul {
+    padding-left: 20px;
+}
+
+main li {
+    margin-bottom: 10px;
+}
+
+main li strong {
+    color: brown;
+}
+
+.btn-lore{
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    background-color: #4c0000;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #00000000;
+    text-align: center;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .row {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .col {
+    flex: 1;
+    text-align: center;
+    margin: 10px 0;
+}
+
+footer .col img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+footer .col p {
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffc107; /* Color dorado para el hover */
+}
+
+footer .row.mt-3 {
+    margin-top: 1rem;
+}
+
+footer .row.mt-3 .col p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ccc; /* Color gris claro para el texto de derechos reservados */
+}
+
+
+
+/*INTENTE HACER UN EFECO EN LINEA PERO NO ME SALIO*/
+
+/*
+.efecto-1::after{
+    background-color: #25d366;
+    bottom: -2px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width .33s linear;
+    width: 0%;
+}
+
+.efecto-2{
+background-color: #25d366;
+  bottom: -2px;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: width .33s linear;
+  width: 0%;
+}
+*/
+    
+
+
