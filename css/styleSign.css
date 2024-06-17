@@ -3,53 +3,42 @@
     box-sizing: border-box;
 }
 
-.form-register {
-    max-width: 100%;
-    padding: 15px;
-}
-.form-register input, .form-register select {
-    width: 100%;
-}
-.form-register label {
-    display: block;
-}
-.form-check-input[type="radio"] {
-    border-radius: 50%;
-}
-select option:hover {
-    background-color: brown;
-    color: white; /* Cambia el color del texto para que sea más legible sobre marrón */
-}
-
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita la barra de scroll horizontal */
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    font-family: Arial, sans-serif;
 }
 
-/* Ajustes del main para ocupar el espacio restante */
+/* Ajustes del header y footer */
+header, footer {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Main ocupa el espacio restante */
 main {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    overflow-y: auto; /* Evita la barra de scroll vertical en main */
+    overflow-y: auto;
 }
 
 /* Formulario de registro */
 .form-register {
     width: 100%;
-    max-width: 800px; /* Ancho máximo */
-    margin: 20px; /* Márgenes responsivos */
+    max-width: 800px;
+    margin: 20px;
     box-shadow: 7px 13px 37px brown;
     padding: 20px 30px;
     border: 2px solid #00000000;
     border-radius: 10px;
-    background-color: #fff; /* Asegura que el fondo sea blanco */
+    background-color: #fff;
 }
 
 /* Ajuste de controles de formulario */
