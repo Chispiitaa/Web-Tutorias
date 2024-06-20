@@ -1,21 +1,19 @@
 <?php
-include 'conexion.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+require 'conexion.php';
+
+if (isset($_POST['boleta'])) {
     $boleta = $_POST['boleta'];
+    $sql = "SELECT * FROM registro WHERE boleta = '$boleta'";
+    $result = $conn->query($sql);
 
-    // Prepara y ejecuta la consulta
-    $stmt = $conn->prepare("SELECT COUNT(*) FROM registro WHERE boleta = ?");
-    $stmt->bind_param("s", $boleta);
-    $stmt->execute();
-    $stmt->bind_result($count);
-    $stmt->fetch();
-    $stmt->close();
-
-    if ($count > 0) {
+    if ($result->num_rows > 0) {
         echo 'exists';
     } else {
-        echo 'not_exists';
+        echo 'not exists';
     }
+
+    $conn->close();
 }
+
 ?>

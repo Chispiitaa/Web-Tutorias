@@ -1,16 +1,26 @@
-/* Ajustes generales */
-* {
+*{
     box-sizing: border-box;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
+}
+
+.container .row .col {
+    padding: 0 5px; /* Añade padding entre columnas */
 }
 
 /* Ajustes del header y footer */
@@ -19,69 +29,70 @@ header, footer {
     width: 100%;
 }
 
-/* Main ocupa el espacio restante */
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow-y: auto;
+.form-login {
+    width: 400px;
+    height: 340px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    box-shadow: 7px 13px 37px brown;
+    padding: 20px 30px;
+    border: 2px solid #00000000;
+    border-radius: 10PX;
 }
 
-/* Formulario de registro */
+.form-check-input:checked {
+    background-color: brown; 
+    border-color: brown; 
+}
+
 .form-register {
-    width: 100%;
-    max-width: 800px;
-    margin: 20px;
+    width: 800px;
+    height: 1430px; 
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
     box-shadow: 7px 13px 37px brown;
     padding: 20px 30px;
     border: 2px solid #00000000;
     border-radius: 10px;
-    background-color: #fff;
-}
+} 
 
-/* Ajuste de controles de formulario */
 .controls {
     width: 100%;
     margin-bottom: 15px;
     padding: 11px 10px;
     background: #ffffff;
-    font-weight: lighter;
+    font-weight:lighter;
     outline: none;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-bottom: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
 }
 
-.controls:focus {
+.controls:focus{
     box-shadow: 0 0 5px brown;
 }
-
-/* Botones */
+  
 .buttons {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
     background: #4c0000;
     border: none;
     color: white;
     margin-bottom: 16px;
-    padding: 10px;
-    box-sizing: border-box;
-}
+  }
 
-.container .row .col {
-    padding: 0 5px; /* Añade padding entre columnas */
-}
-
-/* Ajustes de pie de página */
-footer {
+  footer {
     background-color: #4c0000;
     color: white;
     padding: 20px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-top: 2px solid #00000000;
     text-align: center;
-    margin-top: auto; /* Empuja el footer al fondo */
 }
 
 footer .container {

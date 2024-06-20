@@ -29,12 +29,13 @@
                 <img src="recursos/logotipo_ipn.png" alt="LogoIpn" title="Logo Ipn" width="50" height="50" class="d-inline-block align-text-top">
               </a>
               <ul class="nav justify-content-center">
-                
                 <li class="nav-item">
                     <button type="button" class="btn btn-dark"><?php echo "<a class='btn-lore' href='cerrarSesion.php?nombreSesion=$nombre'>Cerrar</a>";?></button>
                 </li>
+                <li class="nav-item" style="padding-left: 20px;">
+                    <button type="button" class="btn btn-dark">Generar PDF</button>
+                </li>
                 
-        
               </ul>
               <a class="navbar-brand" href="">
                 <img src="recursos/escudoESCOM.png" alt="LogoEscom" title="Logo Escom" width="50" height="50" class="d-inline-block align-text-top" style="justify-content: right;">

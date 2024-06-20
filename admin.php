@@ -50,45 +50,51 @@ $nombre = $_SESSION['nombre'];
         <div class="table-responsive mt-4" style="margin: 0 auto; width: 95%;">
             <h1 style="text-align:center">Tabla de registros</h1>
             <table class="table table-info table-hover table-striped mx-auto">
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>boleta</th>
-                        <th>nombre</th>
-                        <th class="d-none d-md-table-cell">apePa</th>
-                        <th class="d-none d-md-table-cell">apeMa</th>
-                        <th class="d-none d-lg-table-cell">telefono</th>
-                        <th class="d-none d-lg-table-cell">semestre</th>
-                        <th>carrera</th>
-                        <th class="d-none d-xl-table-cell">tutor_genero</th>
-                        <th>email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-                    require 'php/conexion.php';
-                    $sql = "SELECT * FROM registro";
-                    $result = mysqli_query($conn, $sql);
-                    while($mostrar = mysqli_fetch_array($result)) {
-                    ?>
-                    <tr>
-                        <td><?php echo $mostrar['id'] ?></td>
-                        <td><?php echo $mostrar['boleta'] ?></td>
-                        <td><?php echo $mostrar['nombre'] ?></td>
-                        <td class="d-none d-md-table-cell"><?php echo $mostrar['apePa'] ?></td>
-                        <td class="d-none d-md-table-cell"><?php echo $mostrar['apeMa'] ?></td>
-                        <td class="d-none d-lg-table-cell"><?php echo $mostrar['telefono'] ?></td>
-                        <td class="d-none d-lg-table-cell"><?php echo $mostrar['semestre'] ?></td>
-                        <td><?php echo $mostrar['carrera'] ?></td>
-                        <td class="d-none d-xl-table-cell"><?php echo $mostrar['tutor_genero'] ?></td>
-                        <td><?php echo $mostrar['email'] ?></td>
-                    </tr>
-                    <?php
-                    }
-                    mysqli_free_result($result);
-                    $conn->close();
-                    ?>
-                </tbody>
+            <thead>
+    <tr>
+        <th>id</th>
+        <th>boleta</th>
+        <th>nombre</th>
+        <th class="d-none d-md-table-cell">apePa</th>
+        <th class="d-none d-md-table-cell">apeMa</th>
+        <th class="d-none d-lg-table-cell">telefono</th>
+        <th class="d-none d-lg-table-cell">semestre</th>
+        <th>carrera</th>
+        <th class="d-none d-xl-table-cell">tutor_genero</th>
+        <th>email</th>
+        <th>Acciones</th>
+    </tr>
+</thead>
+<tbody>
+    <?php
+    require 'php/conexion.php';
+    $sql = "SELECT * FROM registro";
+    $result = mysqli_query($conn, $sql);
+    while($mostrar = mysqli_fetch_array($result)) {
+    ?>
+    <tr>
+        <td><?php echo $mostrar['id'] ?></td>
+        <td><?php echo $mostrar['boleta'] ?></td>
+        <td><?php echo $mostrar['nombre'] ?></td>
+        <td class="d-none d-md-table-cell"><?php echo $mostrar['apePa'] ?></td>
+        <td class="d-none d-md-table-cell"><?php echo $mostrar['apeMa'] ?></td>
+        <td class="d-none d-lg-table-cell"><?php echo $mostrar['telefono'] ?></td>
+        <td class="d-none d-lg-table-cell"><?php echo $mostrar['semestre'] ?></td>
+        <td><?php echo $mostrar['carrera'] ?></td>
+        <td class="d-none d-xl-table-cell"><?php echo $mostrar['tutor_genero'] ?></td>
+        <td><?php echo $mostrar['email'] ?></td>
+        <td>
+            <a href="editar.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
+            <a href="eliminar.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este registro?');">Eliminar</a>
+        </td>
+    </tr>
+    <?php
+    }
+    mysqli_free_result($result);
+    $conn->close();
+    ?>
+</tbody>
+
             </table>
         </div>
     </div>
