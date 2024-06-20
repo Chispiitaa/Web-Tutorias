@@ -40,7 +40,7 @@
     
     <section class="hero" id="inicio">
         <div class="video-container">
-            <video src="recursos/Y2meta.app-Programa Institucional de tutorías-(720p).mp4" autoplay loop muted></video>
+            <video src="recursos/pit.mp4" autoplay loop muted></video>
             <div class="overlay"></div>
             <div class="content">
                 <h1>Programa Institucional de Tutorías</h1>

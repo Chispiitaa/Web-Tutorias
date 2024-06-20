@@ -4,8 +4,6 @@ body, html {
     height: 100%;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
 }
 
 .hero {
@@ -64,7 +62,6 @@ body, html {
 main {
     background-color: #fff;
     margin-bottom: 30px;
-    flex: 1; /* Hace que el main ocupe el espacio disponible */
 }
 
 main h2 {
@@ -104,7 +101,6 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-top: 2px solid #00000000;
     text-align: center;
-    width: 100%;
 }
 
 footer .container {
