@@ -32,8 +32,8 @@ if ($conn->query($sql) === TRUE) {
     $updateTutorSql = "UPDATE tutores SET num_alum = num_alum + 1 WHERE id = $id_tutor";
     $conn->query($updateTutorSql);
 
-    echo "Registro exitoso";
-    header('Location: ../index.html');
+    echo "<script>alert('Usuario registrado');</script>";
+    header("location:../signin.php");
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
