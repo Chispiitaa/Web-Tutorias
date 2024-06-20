@@ -172,6 +172,10 @@ ALTER TABLE `registro`
   ADD CONSTRAINT `registro_ibfk_2` FOREIGN KEY (`id_tutor`) REFERENCES `tutores` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
+ALTER TABLE `registro`
+ADD `tipo_tutoria` ENUM('Tutoría Individual', 'Tutoría Grupal', 'Tutoría de Recuperación Académica', 'Tutoría de Regularización', 'Tutoría entre Pares') NOT NULL;
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -90,6 +90,17 @@
                         <option value="" disabled selected>Selecciona un tutor</option>
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label for="tipo_tutoria">Tipo de Tutoría:</label>
+                    <select class="form-select controls" id="tipo_tutoria" name="tipo_tutoria" required>
+                        <option value="" disabled selected>Selecciona el tipo de tutoría</option>
+                        <option value="Tutoría Individual">Tutoría Individual</option>
+                        <option value="Tutoría Grupal">Tutoría Grupal</option>
+                        <option value="Tutoría de Recuperación Académica">Tutoría de Recuperación Académica</option>
+                        <option value="Tutoría de Regularización">Tutoría de Regularización</option>
+                        <option value="Tutoría entre Pares">Tutoría entre Pares</option>
+                    </select>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Cuenta</legend>
