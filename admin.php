@@ -61,6 +61,7 @@ $nombre = $_SESSION['nombre'];
         <th class="d-none d-lg-table-cell">semestre</th>
         <th>carrera</th>
         <th class="d-none d-xl-table-cell">tutor_genero</th>
+        <th>tutor</th>
         <th>email</th>
         <th>Acciones</th>
     </tr>
@@ -68,7 +69,9 @@ $nombre = $_SESSION['nombre'];
 <tbody>
     <?php
     require 'php/conexion.php';
-    $sql = "SELECT * FROM registro";
+    $sql = "SELECT registro.*, tutores.nombre AS tutor_nombre 
+            FROM registro 
+            LEFT JOIN tutores ON registro.id_tutor = tutores.id";
     $result = mysqli_query($conn, $sql);
     while($mostrar = mysqli_fetch_array($result)) {
     ?>
@@ -82,6 +85,7 @@ $nombre = $_SESSION['nombre'];
         <td class="d-none d-lg-table-cell"><?php echo $mostrar['semestre'] ?></td>
         <td><?php echo $mostrar['carrera'] ?></td>
         <td class="d-none d-xl-table-cell"><?php echo $mostrar['tutor_genero'] ?></td>
+        <td><?php echo $mostrar['tutor_nombre'] ?></td>
         <td><?php echo $mostrar['email'] ?></td>
         <td>
             <a href="editar.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>

@@ -112,7 +112,8 @@
                     </div>
                 </div>
             </div>
-            <div id="warnings" style="color:brown;"></div>
+            <!-- Mover el área de warnings aquí -->
+            <div id="warnings" class="alert alert-danger mt-3" style="display: none;"></div>
         </form>
     </section>
 </main>

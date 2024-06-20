@@ -72,8 +72,22 @@ header, footer {
     
 }
 
+#warnings {
+    color: brown;
+    font-weight: bold;
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
 .controls:focus{
     box-shadow: 0 0 5px brown;
+}
+
+.form-select:hover{
+    background-color: brown;
+    color: white;
 }
   
 .buttons {

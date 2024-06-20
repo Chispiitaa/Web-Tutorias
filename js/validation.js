@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const apeMat = document.getElementById("apeMa");
     const email = document.getElementById("email");
     const pass = document.getElementById("password");
+    const warningsDiv = document.getElementById('warnings');
 
     form.addEventListener("submit", async function(e) {
         let warnings = "";
+        let hasError = false;
         let entrar = false;
         let valid = true;
         let regexEmail = /^[a-zA-Z0-9._%+-]+@alumno\.ipn\.mx$/;
@@ -46,9 +48,12 @@ document.addEventListener('DOMContentLoaded', function() {
             entrar = true;
         }
 
-        if(entrar){
-            e.preventDefault();
-            document.getElementById("warnings").innerHTML = warnings;
+        if (hasError) {
+            warningsDiv.innerHTML = warnings;
+            warningsDiv.style.display = "block";
+            event.preventDefault();
+        } else {
+            warningsDiv.style.display = "none";
         }
     });
 });
