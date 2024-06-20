@@ -24,7 +24,7 @@
 <main>
     <section class="form-register">
         <h1 style="text-align:center">Formulario de Registro</h1>
-        <form action="php/registro.php" method="post" class="form-floating" autocomplete="off" id="loginForm">
+        <form action="php/registro.php" method="post" class="form-floating" autocomplete="off" id="loginForm" onsubmit="return confirmSubmission()">
             <fieldset>
                 <legend>Datos personales y académicos</legend>
                 <div class="mb-3">
@@ -112,8 +112,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Mover el área de warnings aquí -->
-            <div id="warnings" class="alert alert-danger mt-3" style="display: none;"></div>
+            <div id="warnings" style="color:brown;"></div>
         </form>
     </section>
 </main>
@@ -142,6 +141,7 @@
 </footer>
 <script src="recursos/BootStrap/js/bootstrap.min.js"></script>
 <script src="js/validation.js"></script>
+<script src="js/confirmSubmission.js"></script>
 <!-- Aquí añadimos el script JavaScript para manejar la selección de tutores -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {

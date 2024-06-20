@@ -48,7 +48,7 @@ header, footer {
 
 .form-register {
     width: 800px;
-    height: 1430px; 
+    height: 1700px; 
     margin: auto;
     margin-top: 150px;
     margin-bottom: 150px;
@@ -72,14 +72,6 @@ header, footer {
     
 }
 
-#warnings{
-    color: brown;
-    font-weight: bold;
-    border: 1px solid red;
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-}
 
 .controls:focus{
     box-shadow: 0 0 5px brown;
