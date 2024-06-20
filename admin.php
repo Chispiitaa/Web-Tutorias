@@ -62,6 +62,7 @@ $nombre = $_SESSION['nombre'];
         <th>carrera</th>
         <th class="d-none d-xl-table-cell">tutor_genero</th>
         <th>tutor</th>
+        <th class="d-none d-xl-table-cell">tutoria</th>
         <th>email</th>
         <th>Acciones</th>
     </tr>
@@ -86,6 +87,7 @@ $nombre = $_SESSION['nombre'];
         <td><?php echo $mostrar['carrera'] ?></td>
         <td class="d-none d-xl-table-cell"><?php echo $mostrar['tutor_genero'] ?></td>
         <td><?php echo $mostrar['tutor_nombre'] ?></td>
+        <td class="d-none d-xl-table-cell"><?php echo $mostrar['tipo_tutoria'] ?></td>
         <td><?php echo $mostrar['email'] ?></td>
         <td>
             <a href="editar.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
@@ -107,6 +109,7 @@ $nombre = $_SESSION['nombre'];
                         <th>id</th>
                         <th>nombre</th>
                         <th>apellido</th>
+                        <th>num_alum</th>
                         <th>genero</th>
                         <th>Acciones</th>
                     </tr>
@@ -121,6 +124,7 @@ $nombre = $_SESSION['nombre'];
                         <td><?php echo $mostrar['id'] ?></td>
                         <td><?php echo $mostrar['nombre'] ?></td>
                         <td><?php echo $mostrar['apellido'] ?></td>
+                        <td><?php echo $mostrar['num_alum']?></td>
                         <td><?php echo $mostrar['genero'] ?></td>
                         <td>
                             <a href="editar_tutor.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
