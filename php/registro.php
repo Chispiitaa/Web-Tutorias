@@ -26,7 +26,8 @@ $password = $_POST['password'];
 $id_tutor = $_POST['id_tutor'];
 
 $sql = "INSERT INTO registro (boleta, nombre, apePa, apeMa, telefono, semestre, carrera, tutor_genero, email, password, id_cargo, id_tutor, tipo_tutoria)
-VALUES ('$boleta', '$nombre', '$apePa', '$apeMa', '$telefono', $semestre, '$carrera', '$tutor_genero', '$email', '$password', 2, $id_tutor, $tipo_tutoria)";
+VALUES ('$boleta', '$nombre', '$apePa', '$apeMa', '$telefono', $semestre, '$carrera', '$tutor_genero', '$email', '$password', 2, $id_tutor, '$tipo_tutoria')";
+
 
 if ($conn->query($sql) === TRUE) {
     // Actualizar el número de alumnos del tutor

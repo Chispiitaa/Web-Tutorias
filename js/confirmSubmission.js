@@ -8,7 +8,7 @@ function confirmSubmission() {
     const carrera = document.getElementById('carrera').value;
     const tutorGenero = document.querySelector('input[name="tutor_genero"]:checked').value;
     const tutor = document.getElementById('tutor').value;
-    const tipo_tutoria = document.querySelector('input[name="tipo_tutoria"]:checked').value;
+    const tipo_tutoria = document.getElementById('tipo_tutoria').value;
     const email = document.getElementById('email').value;
 
     const confirmationMessage = `
