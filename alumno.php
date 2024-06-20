@@ -46,7 +46,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-alumno">
         <h1 style="text-align:center">Bienvenid@ <?php echo $_SESSION['nombre'] ?></h1>
     </main>
 

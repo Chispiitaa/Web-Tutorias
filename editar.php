@@ -1,9 +1,14 @@
 <?php
-// Verificar si el usuario está autenticado y si tiene el rol de admin
+session_start([
+    'cookie_lifetime' => 0,
+]);
+
 if (!isset($_SESSION['nombre']) || $_SESSION['nombre'] !== 'Admin') {
     header("Location: signin.php");
     exit();
 }
+$nombre = $_SESSION['nombre'];
+
 require 'php/conexion.php';
 
 $id = $_GET['id'];
