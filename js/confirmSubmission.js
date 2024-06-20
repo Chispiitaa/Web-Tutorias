@@ -7,6 +7,7 @@ function confirmSubmission() {
     const semestre = document.getElementById('semestre').value;
     const carrera = document.getElementById('carrera').value;
     const tutorGenero = document.querySelector('input[name="tutor_genero"]:checked').value;
+    const tutor = document.getElementById('tutor').value;
     const email = document.getElementById('email').value;
 
     const confirmationMessage = `
@@ -19,6 +20,7 @@ function confirmSubmission() {
         \nSemestre: ${semestre}
         \nCarrera: ${carrera}
         \nPreferencia de tutor: ${tutorGenero}
+        \nTutor: ${tutor}
         \nEmail: ${email}
     `;
 

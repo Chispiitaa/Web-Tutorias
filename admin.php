@@ -95,10 +95,44 @@ $nombre = $_SESSION['nombre'];
     <?php
     }
     mysqli_free_result($result);
-    $conn->close();
     ?>
 </tbody>
-
+            </table>
+        </div>
+        <div class="table-responsive mt-4" style="margin: 0 auto; width: 95%;">
+            <h1 style="text-align:center">Tabla de tutores</h1>
+            <table class="table table-info table-hover table-striped mx-auto">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>nombre</th>
+                        <th>apellido</th>
+                        <th>genero</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM tutores";
+                    $result = mysqli_query($conn, $sql);
+                    while($mostrar = mysqli_fetch_array($result)) {
+                    ?>
+                    <tr>
+                        <td><?php echo $mostrar['id'] ?></td>
+                        <td><?php echo $mostrar['nombre'] ?></td>
+                        <td><?php echo $mostrar['apellido'] ?></td>
+                        <td><?php echo $mostrar['genero'] ?></td>
+                        <td>
+                            <a href="editar_tutor.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="eliminar_tutor.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este tutor?');">Eliminar</a>
+                        </td>
+                    </tr>
+                    <?php
+                    }
+                    mysqli_free_result($result);
+                    $conn->close();
+                    ?>
+                </tbody>
             </table>
         </div>
     </div>
