@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "UPDATE tutores SET nombre='$nombre', apellido='$apellido', genero='$genero' WHERE id=$id";
     
     if (mysqli_query($conn, $sql)) {
-        header("Location: index.php");
+        header("Location: admin.php");
     } else {
         echo "Error updating record: " . mysqli_error($conn);
     }
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="recursos/BootStrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styleSign.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
     <link rel="icon" href="recursos/monitor-de-computadora.png" type="image/x-icon">
     <title>Editar Tutor</title>
 </head>

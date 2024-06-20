@@ -1,4 +1,9 @@
 <?php
+// Verificar si el usuario está autenticado y si tiene el rol de admin
+if (!isset($_SESSION['nombre']) || $_SESSION['nombre'] !== 'Admin') {
+    header("Location: signin.php");
+    exit();
+}
 require 'php/conexion.php';
 
 $id = $_GET['id'];
@@ -35,7 +40,7 @@ mysqli_close($conn);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="recursos/BootStrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styleSign.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
     <link rel="icon" href="recursos/monitor-de-computadora.png" type="image/x-icon">
     <title>Editar Registro</title>
 </head>
