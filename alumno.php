@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="recursos/BootStrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styleIndex.css">
     <link rel="icon" href="recursos/monitor-de-computadora.png" type="image/x-icon">
-    <title>Document</title>
+    <title>HOME Alumno</title>
 </head>
 <body>
     <header>
