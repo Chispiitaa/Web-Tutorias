@@ -19,7 +19,7 @@
               </a>
               <ul class="navbar-nav">
               <li class="nav-item">
-                    <button type="button" class="btn btn-dark me-2" ><a href="signin_admin.php" style="text-decoration: none;  color: white;">Admin</a></button>
+                    <button type="button" class="btn btn-dark me-2" ><a href="signin.php" style="text-decoration: none;  color: white;">Inicio</a></button>
                 </li>
               </ul>
               
@@ -34,7 +34,7 @@
 
     <main>
         <section class="form-login">
-            <h1 style="text-align:center;">Inicio de Sesión</h1>
+            <h1 style="text-align:center;">Inicio de Sesión Administrador</h1>
             <form action="php/autenticar.php" method="post" class="form-floating" id="loginForm" autocomplete="off">
                 <fieldset>
                     <div class="mb-3">

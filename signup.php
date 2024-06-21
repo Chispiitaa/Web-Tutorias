@@ -152,7 +152,6 @@
 </footer>
 <script src="recursos/BootStrap/js/bootstrap.min.js"></script>
 <script src="js/validation.js"></script>
-<script src="js/confirmSubmission.js"></script>
 <!-- Aquí añadimos el script JavaScript para manejar la selección de tutores -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {

@@ -1,10 +1,15 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('loginForm');
     const boleta = document.getElementById('boleta');
     const nombre = document.getElementById("nombre");
     const apePat = document.getElementById("apePa");
     const apeMat = document.getElementById("apeMa");
+    const telefono = document.getElementById("telefono");
+    const semestre = document.getElementById("semestre");
+    const carrera = document.getElementById("carrera");
+    const tutorGenero = document.querySelector('input[name="tutor_genero"]:checked');
+    const tutor = document.getElementById("tutor");
+    const tipo_tutoria = document.getElementById("tipo_tutoria");
     const email = document.getElementById("email");
     const pass = document.getElementById("password");
 
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const regexPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
         let regexBol = /^(201[3-9]|202[0-3])\d{6}$/;
 
-        if(!regexBol.test(boleta.value)){
+        if (!regexBol.test(boleta.value)) {
             warnings += 'La boleta es inválida<br>';
             entrar = true;
         }
@@ -38,17 +43,17 @@ document.addEventListener('DOMContentLoaded', function() {
             entrar = true;
         }
 
-        if(!regexEmail.test(email.value)) {
+        if (!regexEmail.test(email.value)) {
             warnings += 'El email no tiene el dominio correcto<br>';
             entrar = true;
         }
 
-        if(!regexPass.test(pass.value)) {
+        if (!regexPass.test(pass.value)) {
             warnings += 'La contraseña no es correcta<br>';
             entrar = true;
         }
 
-        if(entrar){
+        if (entrar) {
             document.getElementById("warnings").innerHTML = warnings;
         } else {
             // Verificar en la base de datos si la boleta o el correo ya existen
@@ -63,8 +68,47 @@ document.addEventListener('DOMContentLoaded', function() {
             if (result === 'exists') {
                 document.getElementById("warnings").innerHTML = 'El usuario con esa boleta o correo ya existe.<br>';
             } else {
-                form.submit(); // Enviar el formulario si no existe el usuario
+                if (confirmSubmission()) {
+                    form.submit(); // Enviar el formulario si no existe el usuario y el usuario confirma
+                }
             }
         }
     });
+
+    function confirmSubmission() {
+        const boleta = document.getElementById('boleta').value;
+        const nombre = document.getElementById('nombre').value;
+        const apePa = document.getElementById('apePa').value;
+        const apeMa = document.getElementById('apeMa').value;
+        const telefono = document.getElementById('telefono').value;
+        const semestre = document.getElementById('semestre').value;
+        const carrera = document.getElementById('carrera').value;
+        const tutorGenero = document.querySelector('input[name="tutor_genero"]:checked').value;
+        const tutor = document.getElementById('tutor').value;
+        const tipo_tutoria = document.getElementById('tipo_tutoria').value;
+        const email = document.getElementById('email').value;
+
+        const confirmationMessage = `
+            ¿Tus datos son correctos?
+            \nBoleta: ${boleta}
+            \nNombre: ${nombre}
+            \nApellido Paterno: ${apePa}
+            \nApellido Materno: ${apeMa}
+            \nTeléfono: ${telefono}
+            \nSemestre: ${semestre}
+            \nCarrera: ${carrera}
+            \nPreferencia de tutor: ${tutorGenero}
+            \nTutor: ${tutor}
+            \nTipo de tutoría: ${tipo_tutoria}
+            \nEmail: ${email}
+        `;
+        if (confirm(confirmationMessage)) {
+            alert("Datos registrados correctamente");
+            return confirm(confirmationMessage);
+        } else {
+            return false;
+        }
+
+        
+    }
 });
