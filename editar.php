@@ -59,19 +59,7 @@ mysqli_close($conn);
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-dark me-2"><a href="signin.php" class="btn-lore">Iniciar</a></button>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#inicio" style="color: brown;">Principal</a>
-                        </li>
-                        <li class="nav-item">
-                            <button type="button" class="btn btn-dark me-2"><a href="signup.php" class="btn-lore">Registrar</a></button>
-                        </li>
-                    </ul>
-                </div>
+            
                 <a class="navbar-brand" href="">
                     <img src="recursos/escudoESCOM.png" alt="LogoEscom" title="Logo Escom" width="50" height="50" class="d-inline-block align-text-top">
                 </a>
@@ -118,6 +106,7 @@ mysqli_close($conn);
                 <input type="email" class="form-control" id="email" name="email" value="<?php echo $row['email']; ?>" required>
             </div>
             <button type="submit" name="update" class="btn btn-danger buttons">Actualizar</button>
+            <a href="admin.php" class="btn btn-danger bottons">Cancelar</a>
         </form>
     </div>
     <footer class="bg-body-tertiary py-3 mt-4">
