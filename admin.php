@@ -53,7 +53,7 @@ $nombre = $_SESSION['nombre'];
             <thead>
     <tr>
         <th>id</th>
-        <th>boleta</th>
+        <th class="d-none d-md-table-cell">boleta</th>
         <th>nombre</th>
         <th class="d-none d-md-table-cell">apePa</th>
         <th class="d-none d-md-table-cell">apeMa</th>
@@ -63,7 +63,7 @@ $nombre = $_SESSION['nombre'];
         <th class="d-none d-xl-table-cell">tutor_genero</th>
         <th>tutor</th>
         <th class="d-none d-xl-table-cell">tutoria</th>
-        <th>email</th>
+        <th class="d-none d-md-table-cell">email</th>
         <th>Acciones</th>
     </tr>
 </thead>
@@ -78,7 +78,7 @@ $nombre = $_SESSION['nombre'];
     ?>
     <tr>
         <td><?php echo $mostrar['id'] ?></td>
-        <td><?php echo $mostrar['boleta'] ?></td>
+        <td class="d-none d-md-table-cell"><?php echo $mostrar['boleta'] ?></td>
         <td><?php echo $mostrar['nombre'] ?></td>
         <td class="d-none d-md-table-cell"><?php echo $mostrar['apePa'] ?></td>
         <td class="d-none d-md-table-cell"><?php echo $mostrar['apeMa'] ?></td>
@@ -88,7 +88,7 @@ $nombre = $_SESSION['nombre'];
         <td class="d-none d-xl-table-cell"><?php echo $mostrar['tutor_genero'] ?></td>
         <td><?php echo $mostrar['tutor_nombre'] ?></td>
         <td class="d-none d-xl-table-cell"><?php echo $mostrar['tipo_tutoria'] ?></td>
-        <td><?php echo $mostrar['email'] ?></td>
+        <td class="d-none d-md-table-cell"><?php echo $mostrar['email'] ?></td>
         <td>
             <a href="editar.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
             <a href="eliminar.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este registro?');">Eliminar</a>
@@ -109,8 +109,8 @@ $nombre = $_SESSION['nombre'];
                         <th>id</th>
                         <th>nombre</th>
                         <th>apellido</th>
-                        <th>num_alum</th>
-                        <th>genero</th>
+                        <th class="d-none d-md-table-cell">num_alum</th>
+                        <th class="d-none d-md-table-cell">genero</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -124,8 +124,8 @@ $nombre = $_SESSION['nombre'];
                         <td><?php echo $mostrar['id'] ?></td>
                         <td><?php echo $mostrar['nombre'] ?></td>
                         <td><?php echo $mostrar['apellido'] ?></td>
-                        <td><?php echo $mostrar['num_alum']?></td>
-                        <td><?php echo $mostrar['genero'] ?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $mostrar['num_alum']?></td>
+                        <td class="d-none d-md-table-cell"><?php echo $mostrar['genero'] ?></td>
                         <td>
                             <a href="editar_tutor.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-primary btn-sm">Editar</a>
                             <a href="eliminar_tutor.php?id=<?php echo $mostrar['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Está seguro de que desea eliminar este tutor?');">Eliminar</a>
