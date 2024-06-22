@@ -32,8 +32,8 @@
                 <li class="nav-item">
                     <button type="button" class="btn btn-dark"><?php echo "<a class='btn-lore' href='cerrarSesion.php?nombreSesion=$nombre'>Cerrar</a>";?></button>
                 </li>
-                <li class="nav-item" style="padding-left: 20px;">
-                    <button type="button" class="btn btn-dark">Generar PDF</button>
+                <li class="nav-item" style="padding-left: 20px">
+                    <button type="button" class="btn btn-dark"><a href="generarPDF.php" class="btn-lore">Generar PDF</a></button>
                 </li>
                 
               </ul>
