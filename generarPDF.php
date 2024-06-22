@@ -59,7 +59,7 @@
         $pdf->Cell(0, 10, utf8_decode($tipoTutoria), 0, 1, 'C');
         $pdf->Output();
     } else {
-        //exit("No se encontraron datos para el usuario actual");
+        exit("No se encontraron datos para el usuario actual");
     }
 
 ?>
