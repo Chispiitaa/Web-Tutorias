@@ -52,9 +52,6 @@
                         <div class="col">
                             <button class="btn btn-danger buttons" type="submit" value="Iniciar" name="iniciar">Iniciar</button>
                         </div>
-                        <div class="col">
-                            <button class="btn btn-danger buttons"><a href="signup.php" style="text-decoration: none; color:white;">Registrarse</a></button>
-                        </div>
                     </div>
                     
                 </div>
