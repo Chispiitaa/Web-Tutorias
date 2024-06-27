@@ -102,22 +102,28 @@ CREATE TABLE `tutores` (
 --
 -- Volcado de datos para la tabla `tutores`
 --
-
 INSERT INTO `tutores` (`id`, `nombre`, `apellido`, `genero`, `num_alum`) VALUES
-(1, 'Carlos', 'Hernandez', 'hombre', 1),
-(2, 'Juan', 'Martinez', 'hombre', 0),
-(3, 'Miguel', 'Lopez', 'hombre', 1),
-(4, 'Pedro', 'Gonzalez', 'hombre', 0),
-(5, 'Luis', 'Rodriguez', 'hombre', 0),
-(6, 'Jorge', 'Perez', 'hombre', 1),
-(7, 'Andres', 'Sanchez', 'hombre', 0),
-(8, 'Ana', 'Garcia', 'mujer', 14),
-(9, 'Maria', 'Fernandez', 'mujer', 1),
-(10, 'Laura', 'Gomez', 'mujer', 1),
-(11, 'Carmen', 'Ruiz', 'mujer', 1),
-(12, 'Elena', 'Diaz', 'mujer', 15),
-(13, 'Sofia', 'Morales', 'mujer', 15),
-(14, 'Lucia', 'Vargas', 'mujer', 15);
+(1, 'José Asunción', 'Enríquez Zárate', 'hombre', 0),
+(2, 'Alberto Jesús', 'Alcántara Méndez', 'hombre', 0),
+(3, 'Felipe de Jesús', 'Figueroa del Prado', 'hombre', 0),
+(4, 'Erick', 'Linares Vallejo', 'hombre', 0),
+(5, 'Edgar Armando', 'Catalán', 'hombre', 0),
+(6, 'Jorge', 'Cortés Galicia', 'hombre', 0),
+(7, 'Edgardo', 'Franco Martínez', 'hombre', 0),
+(8, 'Vicente', 'García Sales', 'hombre', 0),
+(9, 'Iván', 'Mosso García', 'hombre', 0),
+(10, 'Miguel Ángel', 'Rodríguez', 'hombre', 0),
+(11, 'Martha Patricia', 'Jiménez Villanueva', 'mujer', 0),
+(12, 'Patricia', 'Escamilla Miranda', 'mujer', 0),
+(13, 'Laura', 'Méndez Segundo', 'mujer', 0),
+(14, 'Laura', 'Muñoz Salazar', 'mujer', 0),
+(15, 'Judith Margarita', 'Tirado Lule', 'mujer', 0),
+(16, 'Karina', 'Viveros Vela', 'mujer', 0),
+(17, 'Rocio', 'Palacios Solano', 'mujer', 0),
+(18, 'Claudia', 'Díaz Huerta', 'mujer', 0),
+(19, 'Elia', 'Ramírez Martínez', 'mujer', 0),
+(20, 'Gabriela', 'López Ruiz', 'mujer', 0);
+
 
 --
 -- Índices para tablas volcadas

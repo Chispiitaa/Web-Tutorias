@@ -57,7 +57,6 @@ $nombre = $_SESSION['nombre'];
         <th>nombre</th>
         <th class="d-none d-md-table-cell">apePa</th>
         <th class="d-none d-md-table-cell">apeMa</th>
-        <th class="d-none d-lg-table-cell">telefono</th>
         <th class="d-none d-lg-table-cell">semestre</th>
         <th>carrera</th>
         <th class="d-none d-xl-table-cell">tutor_genero</th>
@@ -82,7 +81,6 @@ $nombre = $_SESSION['nombre'];
         <td><?php echo $mostrar['nombre'] ?></td>
         <td class="d-none d-md-table-cell"><?php echo $mostrar['apePa'] ?></td>
         <td class="d-none d-md-table-cell"><?php echo $mostrar['apeMa'] ?></td>
-        <td class="d-none d-lg-table-cell"><?php echo $mostrar['telefono'] ?></td>
         <td class="d-none d-lg-table-cell"><?php echo $mostrar['semestre'] ?></td>
         <td><?php echo $mostrar['carrera'] ?></td>
         <td class="d-none d-xl-table-cell"><?php echo $mostrar['tutor_genero'] ?></td>
